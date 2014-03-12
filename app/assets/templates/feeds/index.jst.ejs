@@ -1,0 +1,12 @@
+<h3>ALL THE FEEDZ</h3>
+<div class="">
+<ul>
+<% feeds.each(function (feed) { %>
+    <li><a href="#/feeds/<%= feed.id %>"><%= feed.escape("title")  %></li></a>
+<% }) %>
+</ul>
+
+
+<div class="feed_form">
+
+</div>
