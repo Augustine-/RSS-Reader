@@ -21,6 +21,11 @@ class FeedsController < ApplicationController
     render :json => @feed.to_json(include: :entries)
   end
 
+  def destroy
+     @feed = Feed.find(params[:id])
+    @feed.destroy!
+  end
+
   private
   def feed_params
     params.require(:feed).permit(:title, :url)

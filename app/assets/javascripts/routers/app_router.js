@@ -10,9 +10,6 @@ window.NewsReader.Routers.AppRouter = Backbone.Router.extend({
   },
 
   feedsIndex: function () {
-
-    // debugger
-
     var indexView = new NewsReader.Views.FeedsIndex({
       collection: NewsReader.Collections.feeds
     });
@@ -27,6 +24,7 @@ window.NewsReader.Routers.AppRouter = Backbone.Router.extend({
       model: feedModel,
       collection: feedModel.entries()
     });
+
     this.$rootEl.html(showView.render().$el);
   }
 });

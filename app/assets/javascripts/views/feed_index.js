@@ -2,7 +2,7 @@ window.NewsReader.Views.FeedsIndex = Backbone.View.extend({
   template: JST["feeds/index"],
 
   initialize: function () {
-    this.listenTo(this.collection, "add reset sync", this.render)
+    this.listenTo(this.collection, "add reset sync submit destroy change", this.render)
   },
 
   render: function () {
@@ -12,11 +12,15 @@ window.NewsReader.Views.FeedsIndex = Backbone.View.extend({
   },
 
   events: {
-    "click #refresh" : "refresh"
+    "click button.destroy": "destroy"
   },
 
-  refresh: function (event) {
+  destroy: function (event) {
     event.preventDefault();
-    // new feed stuff
+    var feed_id = event.currentTarget.id
+    // debugger
+    NewsReader.Collections.feeds.get(feed_id).destroy()
   }
+
+
 });

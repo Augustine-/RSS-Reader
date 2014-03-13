@@ -16,7 +16,7 @@ window.NewsReader = {
         var feeds = NewsReader.Collections.feeds
         var newView = new NewsReader.Views.NewFeedView({collection: feeds, model: model});
         $('.feed_form').html(newView.render().$el);
-
+        
         new NewsReader.Routers.AppRouter({
           $rootEl: $('#content')
         }); //pass in root element to routers

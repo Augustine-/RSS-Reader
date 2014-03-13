@@ -22,7 +22,7 @@ window.NewsReader.Views.NewFeedView = Backbone.View.extend({
 
     this.collection.create({ title: params.title, url: params.url}, {
 
-      success: function () {
+      success: function (model) {
         Backbone.history.navigate("", {trigger: true})
       }
     })
