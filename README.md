@@ -1,12 +1,3 @@
-# Welcome to News Reader Demo
-
-* bundle install
-* rake db:migrate
-* rake db:seed
-
-Three feeds with their entries will be created upon running `rake
-db:seed`.
-
-Good luck. Have fun.
+The way news goes these days, you'll fall behind in a flash. Not to worry, Augustine-'s got you covered with this snazzy RSS Reader. Stay up to date!
 
 
